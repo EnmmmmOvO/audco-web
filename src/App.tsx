@@ -106,7 +106,7 @@ function App() {
 
         <Card
           color="#cf9b5c"
-          logo="gdb.png"
+          logo="GDB.png"
           title="Global Digital Bank"
           background="gdb-page.png"
           description={['GDB Wallet', 'AUDCO （Web 3.0 商业生态网络）']}
