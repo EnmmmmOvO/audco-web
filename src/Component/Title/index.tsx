@@ -1,12 +1,12 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { CSSProperties, useEffect, useRef, useState } from 'react';
 
-interface WebsiteProps {
-  description: string;
-  website: string;
+interface TitleProps {
+  title: string;
+  style?: CSSProperties;
   className?: string;
 }
 
-const Website = ({ website, description, className }: WebsiteProps) => {
+const Title = ({ title, style, className }: TitleProps) => {
   const [fadeIn, setFadeIn] = useState(false);
   const elementRef = useRef(null);
 
@@ -34,10 +34,10 @@ const Website = ({ website, description, className }: WebsiteProps) => {
   }, []);
 
   return (
-    <div ref={elementRef} className={`${fadeIn ? 'slide-in-left' : ''} text-[#e7b973] ${className}`}>
-      <a href={website} target="_blank" rel="noreferrer">{description}: <span className="text-white">{website}</span></a>
+     <div ref={elementRef} className={`${fadeIn ? 'fade-in' : ''} ${className}`} style={style}>
+      {title}
     </div>
   );
-};
+}
 
-export default Website;
+export default Title;

@@ -1,12 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-interface WebsiteProps {
-  description: string;
-  website: string;
+interface ImageProps {
+  src: string;
   className?: string;
 }
 
-const Website = ({ website, description, className }: WebsiteProps) => {
+const Image = ({ src, className }: ImageProps) => {
   const [fadeIn, setFadeIn] = useState(false);
   const elementRef = useRef(null);
 
@@ -33,11 +32,7 @@ const Website = ({ website, description, className }: WebsiteProps) => {
     };
   }, []);
 
-  return (
-    <div ref={elementRef} className={`${fadeIn ? 'slide-in-left' : ''} text-[#e7b973] ${className}`}>
-      <a href={website} target="_blank" rel="noreferrer">{description}: <span className="text-white">{website}</span></a>
-    </div>
-  );
-};
+  return <img src={src} className={`${fadeIn ? 'slide-in-left' : ''} ${className}`} alt="logo" ref={elementRef} />;
+}
 
-export default Website;
+export default Image;

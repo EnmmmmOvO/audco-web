@@ -5,6 +5,9 @@ import Card from './Component/Card';
 import Typography from './Component/Typography';
 import Text from './Component/Text';
 import Website from './Component/Website';
+import Title from './Component/Title';
+import Image from './Component/Image';
+import Iframe from './Component/Iframe';
 
 function App() {
   const [scale1, setScale1] = useState(1);
@@ -42,21 +45,22 @@ function App() {
     {/*  style={{ backgroundImage: `linear-gradient(to bottom, black 60%, transparent 95%), url(${process.env.PUBLIC_URL}/static/bitcoin.png)` }}*/}
     {/*/>*/}
     <div className="w-screen flex bg-black flex-col justify-center">
-      <div className="p-7 flex justify-between">
-        <div><img src={`${process.env.PUBLIC_URL}/static/logo/AUDCO.png`} className="w-10" alt="logo"/></div>
-        <div className="flex align-middle">
-          <img src={`${process.env.PUBLIC_URL}/static/logo/hamburger-icon.svg`} className="w-5" alt="logo"/>
-        </div>
+      <div className="p-7 flex justify-end">
+        <div><img src={`${process.env.PUBLIC_URL}/static/logo/AUDCO.png`} className="w-14" alt="logo"/></div>
+        {/*<div className="flex align-middle">*/}
+        {/*  <img src={`${process.env.PUBLIC_URL}/static/logo/hamburger-icon.svg`} className="w-5" alt="logo"/>*/}
+        {/*</div>*/}
       </div>
 
       <div className="pt-[40px] w-full">
         <div className="ml-[30px] mr-[30px] mb-[56px]">
-          <Line/>
-          <div className="text-[#e7b973] text-4xl font-bold mt-6">WEB 3.0</div>
-          <div className="text-[#e7b973] text-4xl mt-3">商业生态社区</div>
+          <Line />
+
+          <div className="text-[#e7b973] text-4xl font-bold mt-6 slide-in-left">WEB 3.0</div>
+          <div className="text-[#e7b973] text-4xl mt-3 slide-in-left">商业生态社区</div>
         </div>
 
-        <div className='transition-transform ease-in-out w-full'
+        <div className='transition-transform ease-in-out w-full fade-in'
              style={{transform: `scale(${scale1})`, transition: 'transform ease-out'}}>
           <img
             src={`${process.env.PUBLIC_URL}/static/bitcoin.png`}
@@ -78,8 +82,8 @@ function App() {
       <div className="ml-5 mr-5 mt-24">
         <Line/>
         <div className="flex items-center mt-3">
-          <div className="text-4xl align-middle text-white">DCG公司介绍</div>
-          <img src={`${process.env.PUBLIC_URL}/static/logo/DCG.png`} className="w-12 ml-10" alt="DCG LOGO"/>
+          <Title title={'DCG公司介绍'} className="text-4xl align-middle text-white" />
+          <Image src={`${process.env.PUBLIC_URL}/static/logo/DCG.png`} className="w-12 ml-10"/>
         </div>
       </div>
 
@@ -112,8 +116,9 @@ function App() {
       <div className="ml-5 mr-5 mt-24">
         <Line/>
         <div className="items-center mt-8">
-          <div className="text-3xl align-middle text-white fade-in">AUDCO商业生态网络<p>+数字钱包</p></div>
-          <div className="text-[#e7b973] text-4xl mt-3 fade-in">商业的未来</div>
+          <Title title={'AUDCO商业生态网络'} className="text-3xl align-middle text-white" />
+          <Title title='+数字钱包' className="text-3xl align-middle text-white" />
+          <Title title='商业的未来' className={`text-[#e7b973] text-4xl mt-3`} />
         </div>
 
         <Typography
@@ -139,8 +144,8 @@ function App() {
         <Line/>
         <div className="items-center mt-8 mb-8">
           <div className="mt-3">
-            <div className="text-4xl align-middle text-white">介绍</div>
-            <img src={`${process.env.PUBLIC_URL}/static/logo/GDB.png`} className="h-10 mt-5" alt="DCG LOGO"/>
+            <Title title='介绍' className='text-4xl align-middle text-white' />
+            <Image src={`${process.env.PUBLIC_URL}/static/logo/GDB.png`} className="h-10 mt-5"/>
           </div>
         </div>
       </div>
@@ -150,7 +155,7 @@ function App() {
         <img src={`${process.env.PUBLIC_URL}/static/car.jpg`} className="w-full rounded-2xl" alt="logo"/>
       </div>
 
-      <div className="ml-5 mr-5">
+      <div className="ml-5 mr-5 mt-5">
         <Text
           description="作为AUDCO社区投资人常用的区块链钱包，GDB钱包和商城正在链接更多商品和购买者。许多澳大利亚商家已经在GDB商城推广品牌和产品，其加密货币支付系统让商家能更自由，安全地管理加密货币资产，并引导购买流量。"
         />
@@ -160,19 +165,19 @@ function App() {
 
         <div className="flex mt-8">
           <div className="flex-1 flex justify-center">
-            <img src={`${process.env.PUBLIC_URL}/static/logo/google-store.svg`} className="w-6" alt="DCG LOGO"/>
+            <Image src={`${process.env.PUBLIC_URL}/static/logo/google-store.svg`} className="w-6" />
           </div>
           <div className="flex-1 flex justify-center">
-            <img src={`${process.env.PUBLIC_URL}/static/logo/app-store.svg`} className="w-6" alt="DCG LOGO"/>
+            <Image src={`${process.env.PUBLIC_URL}/static/logo/app-store.svg`} className="w-6" />
           </div>
         </div>
 
         <div className="flex mt-5">
           <div className="flex-1 flex justify-center">
-            <img src={`${process.env.PUBLIC_URL}/static/gdb-google.png`} className="w-36" alt="DCG LOGO"/>
+            <Image src={`${process.env.PUBLIC_URL}/static/gdb-google.png`} className="w-36" />
           </div>
           <div className="flex-1 flex justify-center">
-            <img src={`${process.env.PUBLIC_URL}/static/gdb-app.png`} className="w-36" alt="DCG LOGO"/>
+            <Image src={`${process.env.PUBLIC_URL}/static/gdb-app.png`} className="w-36" />
           </div>
         </div>
       </div>
@@ -181,27 +186,38 @@ function App() {
         <Line/>
         <div className="items-center mt-8 mb-8">
           <div className="mt-3">
-            <div className="text-4xl align-middle text-white">如何成为商家？</div>
+            <Title title='如何成为商家？' className='text-4xl align-middle text-[#e7b973]' />
           </div>
         </div>
+
+        <div className="mt-12 flex overflow-x-auto pl-5 pr-5 space-x-6 scrollbar-hide mb-10">
+          <Iframe src={'https://www.youtube.com/embed/E2U5vJD4Vew'} title={'GDB 账户注册及使用'}/>
+          <Iframe src={'https://www.youtube.com/embed/loCc8RrUKq0'} title={'GDB 商家信息入驻'}/>
+        </div>
+
+        <Website
+          description={'更多视频及文字教程'}
+          website={'https://audco.cloudns.ch/resource/'}
+          className="text-xl"
+        />
       </div>
 
       <div className="ml-5 mr-5 mt-24">
         <Line/>
         <div className="items-center mt-8 mb-8">
           <div className="flex justify-between items-center">
-            <div className="text-4xl align-middle mr-5 text-[#e7b973]">加入AUDCO商业生态社区</div>
-            <img src={`${process.env.PUBLIC_URL}/static/logo/AUDCO.png`} className="h-20" alt="DCG LOGO"/>
+            <Title title='加入AUDCO商业生态社区' className='text-4xl align-middle mr-5 text-[#e7b973]'/>
+            <Image src={`${process.env.PUBLIC_URL}/static/logo/AUDCO.png`} className="h-20"/>
           </div>
         </div>
-        <Text 
-          description={'加入AUDCO社区，让更多商家、企业、投资人、商品与服务紧密连接在一起。助力您的生意，丰富您的投资类别'} 
-          style={{ marginTop: '20px' }}
+        <Text
+          description={'加入AUDCO社区，让更多商家、企业、投资人、商品与服务紧密连接在一起。助力您的生意，丰富您的投资类别'}
+          style={{marginTop: '20px'}}
         />
 
         <div className="mt-12 mb-8">
-          <Website description={'Website'} website={'https://www.au-dco.com/'} />
-          <Website description={'Twitter'} website={'https://x.com/Web3Audco'} />
+          <Website description={'Website'} website={'https://www.au-dco.com/'}/>
+          <Website description={'Twitter'} website={'https://x.com/Web3Audco'}/>
         </div>
 
 
@@ -219,9 +235,9 @@ function App() {
           style={{ color: '#e7b973', fontSize: '24px' }}
         />
 
-        <div className="flex items-center justify-around mt-5">
+        <div className="flex items-center justify-around mt-8">
           <div>
-            <img src={`${process.env.PUBLIC_URL}/static/whatsapp.jpg`} style={{ width: 240 }} alt="DCG LOGO"/>
+            <Image src={`${process.env.PUBLIC_URL}/static/whatsapp.jpg`}/>
           </div>
           <Text description={'让更多的商家，企业，投资人，商品与服务更紧密的链接在一起。'} style={{ marginLeft: 30 }}/>
         </div>
