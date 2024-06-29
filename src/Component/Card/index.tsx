@@ -1,4 +1,5 @@
 import React from 'react';
+import Text from '../Text';
 
 interface CardProps {
   logo: string;
@@ -6,11 +7,13 @@ interface CardProps {
   color: string;
   background: string;
   description: string[];
+  else?: string;
 }
 
 
 const Card = (props: CardProps) => {
   return (
+    <div>
     <div
       className="rounded-xl h-[500px] w-[330px] min-w-[330px] bg-cover flex-shrink-0"
       style={{
@@ -30,6 +33,8 @@ const Card = (props: CardProps) => {
           ))}
         </ul>
       </div>
+    </div>
+    {props.else && <Text description={props.else} className="text-white flex justify-center mt-5" />}
     </div>
   );
 }

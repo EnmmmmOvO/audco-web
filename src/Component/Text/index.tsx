@@ -3,9 +3,10 @@ import React, { CSSProperties, useEffect, useRef, useState } from 'react';
 interface TextProps {
   description: string;
   style?: CSSProperties;
+  className?: string;
 }
 
-const Text = ({ description, style }: TextProps) => {
+const Text = ({ description, style, className }: TextProps) => {
   const [fadeIn, setFadeIn] = useState(false);
   const elementRef = useRef(null);
 
@@ -34,7 +35,7 @@ const Text = ({ description, style }: TextProps) => {
 
   return (
     <>
-      <div ref={elementRef} className={`text-white ${fadeIn ? 'slide-in-left' : ''}`} style={{...style}}>
+      <div ref={elementRef} className={`${className} text-white ${fadeIn ? 'slide-in-left' : ''}`} style={{...style}}>
         {description}
       </div>
     </>
