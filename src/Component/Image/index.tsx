@@ -3,9 +3,10 @@ import React, { useEffect, useRef, useState } from 'react';
 interface ImageProps {
   src: string;
   className?: string;
+  onClick?: () => void;
 }
 
-const Image = ({ src, className }: ImageProps) => {
+const Image = ({ src, className, onClick }: ImageProps) => {
   const [fadeIn, setFadeIn] = useState(false);
   const elementRef = useRef(null);
 
@@ -32,7 +33,7 @@ const Image = ({ src, className }: ImageProps) => {
     };
   }, []);
 
-  return <img src={src} className={`${fadeIn ? 'slide-in-left' : ''} ${className}`} alt="logo" ref={elementRef} />;
+  return <img src={src} className={`${fadeIn ? 'slide-in-left' : ''} ${className}`} alt="logo" ref={elementRef} onClick={onClick}/>;
 }
 
 export default Image;

@@ -22,7 +22,7 @@ const Card = (props: CardProps) => {
     >
       <div className="ml-4 mr-4 mt-5">
         <div className="flex items-center justify-between">
-          <div className="text-2xl font-bold pt-5 pb-5 pr-2" style={{
+          <div className="text-2xl font-bold pt-5 pb-5 pr-2 min-h-[104px] flex items-center" style={{
             color: props.color
           }}>{props.title}</div>
           <img src={`${process.env.PUBLIC_URL}/static/logo/${props.logo}`} className="h-10" alt="DCG LOGO"/>

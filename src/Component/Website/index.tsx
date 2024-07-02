@@ -35,7 +35,7 @@ const Website = ({ website, description, className }: WebsiteProps) => {
 
   return (
     <div ref={elementRef} className={`${fadeIn ? 'slide-in-left' : ''} text-[#e7b973] ${className}`}>
-      <a href={website} target="_blank" rel="noreferrer">{description}: <span className="text-white">{website}</span></a>
+      <a href={website} target="_blank" rel="noreferrer">{description}: <span className="text-white border-b-2 border-white">{website}</span></a>
     </div>
   );
 };
