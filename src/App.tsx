@@ -10,6 +10,7 @@ import Image from './Component/Image';
 import Iframe from './Component/Iframe';
 import Header from './Component/Header';
 import LangContext from './Context';
+import Merchant from './Component/Merchant';
 
 function App() {
   const [scale1, setScale1] = useState(1);
@@ -37,6 +38,8 @@ function App() {
   };
 
   useEffect(() => {
+    setLang(navigator.language.includes('en') ? 'en' : 'zh');
+
     const scroll = () => {
       handleScroll(130, 730, setScale1);
       handleScroll(2550, 2950, setScale2);
@@ -102,32 +105,11 @@ function App() {
 
 
         <div className="mt-12 flex overflow-x-auto pl-5 pr-5 space-x-6 scrollbar-hide">
-          <Card
-            logo="logo.png"
-            color="#2e42ea"
-            title="DAEX GLOBAL"
-            background="DAEX-page.png"
-            description={['Austrac Registration No: DCE100740685-001', content.provide, content.users]}
-            else={content.dce}
-          />
+          <Card background={lang === 'zh' ? "WechatIMG1046.jpg" : "10491719987082_.pic_hd.jpg"} else={content.dce as string} />
 
-          <Card
-            logo="vg.png"
-            color="#3a5de7"
-            title="CryptoSage Fund"
-            background="vgpage.jpg"
-            description={['Vanguard Global', content.fund]}
-            else={content.cf}
-          />
+          <Card background={lang === 'zh' ? "WechatIMG27.png" : "291719985773_.pic.png"} else={content.cf} />
 
-          <Card
-            color="#cf9b5c"
-            logo="GDB.png"
-            title={`GDB`}
-            background="gdb-page.png"
-            description={['GDB Wallet', content.ben]}
-            else={content.include}
-          />
+          <Card background={lang === 'zh' ? "WechatIMG1039.jpg" : "WechatIMG1040.jpg"} else={content.include as string} />
         </div>
 
         <div className="ml-5 mr-5 mt-12" id="audco">
@@ -275,6 +257,8 @@ function App() {
               <Title title={content.mer} className='text-4xl align-middle text-[#e7b973]'/>
             </div>
           </div>
+
+          <Merchant />
         </div>
 
         <div className="text-white mt-20 mb-10 flex w-full justify-center">
