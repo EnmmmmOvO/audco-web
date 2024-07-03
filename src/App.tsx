@@ -53,12 +53,12 @@ function App() {
 
   return (
     <LangContext.Provider value={{ lang, setLang, content }}>
-    <div
-      className="w-screen min-h-screen fixed bottom-0 top-0 -z-10"
-      style={{ backgroundImage: `linear-gradient(to bottom, black 30%, transparent 50%), url(${process.env.PUBLIC_URL}/static/34.jpg)`, overflow: 'hidden' }}
-      />
-    <Header />
-      <div className="w-screen flex flex-col justify-center pt-28">
+      <div
+        className="w-screen min-h-screen fixed bottom-0 top-0 -z-10 overflow-hidden"
+        style={{ backgroundImage: `linear-gradient(to bottom, black 30%, transparent 50%), url(${process.env.PUBLIC_URL}/static/34.jpg)`, overflow: 'hidden' }}
+        />
+      <Header />
+      <div className="w-screen flex flex-col justify-center pt-28 box-border overflow-hidden">
         <div className="w-full mt-10">
           <div className="ml-[30px] mr-[30px] mb-[56px]">
             <div className="text-[#e7b973] text-5xl font-bold mb-8 slide-in-left">AUDCO</div>
@@ -70,7 +70,7 @@ function App() {
           <div className='transition-transform ease-in-out w-full fade-in'
                style={{transform: `scale(${scale1})`, transition: 'transform ease-out'}}>
             <img
-              src={`${process.env.PUBLIC_URL}/static/2.png`}
+              src={`${process.env.PUBLIC_URL}/static/output.jpg`}
               className="w-full rounded-b-2xl" alt="logo"/>
             <div className="text-white flex justify-center mt-5">{content.e}</div>
           </div>
@@ -107,9 +107,9 @@ function App() {
         <div className="mt-12 flex overflow-x-auto pl-5 pr-5 space-x-6 scrollbar-hide">
           <Card background={lang === 'zh' ? "WechatIMG1046.jpg" : "10491719987082_.pic_hd.jpg"} else={content.dce as string} />
 
-          <Card background={lang === 'zh' ? "WechatIMG27.png" : "291719985773_.pic.png"} else={content.cf} />
+          <Card background={lang === 'zh' ? "WechatIMG27.png" : "291719985773_.pic.png"} else={content.cf} load/>
 
-          <Card background={lang === 'zh' ? "WechatIMG1039.jpg" : "WechatIMG1040.jpg"} else={content.include as string} />
+          <Card background={lang === 'zh' ? "WechatIMG1039.jpg" : "WechatIMG1040.jpg"} else={content.include as string} load/>
         </div>
 
         <div className="ml-5 mr-5 mt-12" id="audco">
