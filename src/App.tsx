@@ -72,8 +72,9 @@ function App() {
             <img
               src={`${process.env.PUBLIC_URL}/static/output.jpg`}
               className="w-full rounded-b-2xl" alt="logo"/>
-            <div className="text-white flex justify-center mt-5">{content.e}</div>
           </div>
+
+          <div className="text-white flex justify-center ml-5 mr-5 text-sm">{content.e}</div>
         </div>
 
         <div className="ml-5 mr-5 mt-12" id="introduce">
