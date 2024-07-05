@@ -29,7 +29,21 @@ const Header: React.FC = () => {
             type="button"
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
           >
-            <img src={`${process.env.PUBLIC_URL}/static/lang.svg`} className={`h-6 w-6 mr-6`} aria-hidden="true" onClick={() => setLang(lang === "zh" ? "en" : "zh" )} alt="lang"/>
+            <a href="https://audco.cloudns.ch/easycal/" target="_blank" rel="noopener noreferrer">
+              <img
+                src={`${process.env.PUBLIC_URL}/static/calculator.svg`}
+                className={`h-5 w-5 mr-6`}
+                alt="calculator"
+                aria-hidden="true"
+              />
+            </a>
+            <img
+              src={`${process.env.PUBLIC_URL}/static/lang.svg`}
+              className={`h-6 w-6 mr-6`}
+              aria-hidden="true"
+              onClick={() => setLang(lang === "zh" ? "en" : "zh" )}
+              alt="lang"
+            />
             <Bars3Icon className="h-6 w-6 text-[#e7b973]" onClick={() => setMobileMenuOpen(true)} aria-hidden="true"/>
           </button>
         </div>

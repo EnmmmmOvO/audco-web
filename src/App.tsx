@@ -197,6 +197,7 @@ function App() {
           <div className="mt-12 flex overflow-x-auto pl-5 pr-5 space-x-6 scrollbar-hide mb-10">
             <Iframe src={'https://www.youtube.com/embed/E2U5vJD4Vew'} title={content.register}/>
             <Iframe src={'https://www.youtube.com/embed/loCc8RrUKq0'} title={content.in}/>
+            <Iframe src={'https://www.youtube.com/embed/XpqPIblpDqk'} title={content.online} />
           </div>
 
           <Text description={content.click} />
