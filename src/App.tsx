@@ -259,7 +259,7 @@ function App() {
             </div>
           </div>
 
-          <div className="ml-5 mr-5 mt-24">
+          <div className="ml-5 mr-5 mt-24" id="community">
             <Line/>
             <div className="items-center mt-8 mb-8">
               <div className="mt-3">

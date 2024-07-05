@@ -96,7 +96,7 @@ const CustomDialog = () => {
             </div>
             <div
               onClick={() => {
-                const temp = document.getElementById('joinus')?.offsetTop;
+                const temp = document.getElementById('community')?.offsetTop;
                 slide(temp ? temp - 96 : 0);
               }}
               className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-black"

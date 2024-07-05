@@ -4,6 +4,12 @@ import Image from '../Image';
 const Merchant = () => {
   const photo = [
     '华阳集运.jpg',
+    'Hua Ao.jpg',
+    'bohemia.png',
+    'molife.png',
+    '筠姿.jpg',
+    'JK.jpg',
+    'tianyd.png',
     '澳华教育.png',
     '盼茶ASHFIELD.jpg',
     'Concept Wrape.jpg',
@@ -13,7 +19,6 @@ const Merchant = () => {
     'AG Cafe.jpg',
     'Devrek.png',
     'E.T. Chickens Processors.png',
-    'Hua Ao.jpg',
     'JNZ BUSINESS.jpg',
     'MBR.jpg',
     'Print One.jpg',
