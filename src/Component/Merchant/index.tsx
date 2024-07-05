@@ -3,6 +3,7 @@ import Image from '../Image';
 
 const Merchant = () => {
   const photo = [
+    '华阳集运.jpg',
     '澳华教育.png',
     '盼茶ASHFIELD.jpg',
     'Concept Wrape.jpg',
@@ -21,8 +22,6 @@ const Merchant = () => {
     'The Yook.png',
     'Top Global.jpg',
     'WSET.jpg',
-    'WechatIMG244.jpg',
-    '华阳集运.jpg',
     '塑眠.jpg',
     '太赫.jpeg',
     '小松龙虾.jpg',

@@ -6,7 +6,12 @@ interface LangContextProps {
   setLang: (lang: string) => void;
 }
 
-const LangContext = React.createContext<LangContextProps>({
+interface DialogContextProps {
+  open: boolean;
+  setOpen: (open: boolean) => void;
+}
+
+export const LangContext = React.createContext<LangContextProps>({
   content: {},
   lang: "zh",
   setLang: () => {
@@ -16,4 +21,11 @@ const LangContext = React.createContext<LangContextProps>({
   }
 });
 
-export default LangContext;
+export const DialogContext = React.createContext<DialogContextProps>({
+  open: false,
+  setOpen: () => {
+    if (process.env.NODE_ENV === 'development') {
+      console.warn('DialogContext is not defined');
+    }
+  }
+});

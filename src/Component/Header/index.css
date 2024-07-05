@@ -1,0 +1,9 @@
+.header-show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.header-hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+}
