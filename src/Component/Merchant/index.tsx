@@ -37,7 +37,7 @@ const Merchant = () => {
 
   return (
     <div className="container">
-      <div className="flex flex-wrap gap-3 justify-between">
+      <div className="flex flex-wrap gap-3">
         {photo.map((photo, index) => (
           <Image
             key={index}
